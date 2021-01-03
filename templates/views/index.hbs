@@ -1,0 +1,51 @@
+    {{>header}}
+
+    <section class="indexSec" id="title">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <h1 class="big-heading">Find out the weather forecast of your locality.</h1>
+                </div>
+
+                <div class="col-lg-6">
+                    <img src="img/bg3.png" alt="weather-clipart">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="inputForm">
+
+        <div class="container-fluid">
+
+            <form class="row g-3" action="/weather" method="get">
+                <div class="col-lg-3">
+                    <label for="inpCity">
+                        <h3>Enter Locality : </h3>
+                    </label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" class="form-control" id="inpCity" name="inpCity">
+                </div>
+                <div class="col-lg-3">
+                    <select class="form-select" name="units"> 
+                        <option value="metric" selected>Metric System</option>
+                        <option value="standard">Standard System</option>
+                        <option value="imperial">Imperial System</option>
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                    <button type="submit" class="inpButton" onclick="getForecast()">Get Forecast</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    {{>footer}}
