@@ -9,5 +9,4 @@ router.post('/weather', weatherController.postWeather)
 
 router.get('/weather', weatherController.getWeather)
 
-
 module.exports = router;
