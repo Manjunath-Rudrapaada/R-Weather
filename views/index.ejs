@@ -1,4 +1,4 @@
-    {{>header}}
+<%- include('includes/header.ejs') %>
 
     <section class="indexSec" id="title">
 
@@ -24,28 +24,28 @@
 
         <div class="container-fluid">
 
-            <form class="row g-3" action="/weather" method="get">
+            <form class="row g-3" action="/weather" method="post">
                 <div class="col-lg-3">
                     <label for="inpCity">
-                        <h3>Enter Locality : </h3>
-                    </label>
+                    <h3>Enter Locality : </h3>
+                </label>
                 </div>
                 <div class="col-lg-3">
                     <input type="text" class="form-control" id="inpCity" name="inpCity">
                 </div>
                 <div class="col-lg-3">
-                    <select class="form-select" name="units"> 
-                        <option value="metric" selected>Metric System</option>
-                        <option value="standard">Standard System</option>
-                        <option value="imperial">Imperial System</option>
-                    </select>
+                    <select class="form-select" name="units">
+                    <option value="metric" selected>Metric System</option>
+                    <option value="standard">Standard System</option>
+                    <option value="imperial">Imperial System</option>
+                </select>
                 </div>
                 <div class="col-lg-3">
-                    <button type="submit" class="inpButton" onclick="getForecast()">Get Forecast</button>
+                    <button type="submit" class="inpButton">Get Forecast</button>
                 </div>
             </form>
 
         </div>
     </section>
 
-    {{>footer}}
+    <%- include('includes/footer.ejs') %>
